@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 //Please type the name of the file you want to edit here:
-const OnShapefileName = 'Extrude8 - Copy';
+const OnShapefileName = 'Extrude9C';
 
 // const OnShapefileName = 'Extrude10 - Copy';
 console.log('Typed name: ' + OnShapefileName)
@@ -37,7 +37,9 @@ async function launchBrowserAndNavigateToDocument() {
     const newPage = await browser.newPage();
     console.log('New page opened successfully.');
 
-    await newPage.goto('https://cad.onshape.com/documents?resourceType=resourcecompanyowner&nodeId=65efc5e06e5bec02f57742fe', { waitUntil: 'networkidle0', timeout: 0 });
+    await newPage.goto('https://cad.onshape.com/signin?page=2&email=macosta2015@my.fit.edu', { waitUntil: 'networkidle0', timeout: 0 });
+
+    // await newPage.goto('https://cad.onshape.com/documents?resourceType=resourcecompanyowner&nodeId=65efc5e06e5bec02f57742fe', { waitUntil: 'networkidle0', timeout: 0 });
     console.log('Page loaded successfully.');
 
     await newPage.type('input[name="email"].form-control', process.env.EMAIL);
