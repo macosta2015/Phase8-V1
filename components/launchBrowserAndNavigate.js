@@ -42,8 +42,8 @@ async function launchBrowserAndNavigateToDocument() {
     // await newPage.goto('https://cad.onshape.com/documents?resourceType=resourcecompanyowner&nodeId=65efc5e06e5bec02f57742fe', { waitUntil: 'networkidle0', timeout: 0 });
     console.log('Page loaded successfully.');
 
-    await newPage.type('input[name="email"].form-control', process.env.EMAIL);
-    console.log('Typed email successfully.');
+    // await newPage.type('input[name="email"].form-control', process.env.EMAIL);
+    // console.log('Typed email successfully.');
 
     await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
     await newPage.type('input[name="password"].form-control', process.env.PASSWORD);
